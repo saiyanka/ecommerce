@@ -236,6 +236,7 @@ background: url('assets/wave.svg');
 }
 .books {
     display: flex;
+    flex-wrap: wrap;
 }
 .book {
     width: 25%;
