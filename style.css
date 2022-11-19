@@ -270,5 +270,11 @@ background: url('assets/wave.svg');
     padding-right: 6px;
 }
 
-/*Navigation */
+/*Latest*/
+.row__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /*Navigation*/
