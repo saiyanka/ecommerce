@@ -21,6 +21,25 @@
                     <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
                 </ul>
             </div>
+            <button class="btn__menu">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="menu__backdrop">
+                <button class="btn-menu btn__menu--close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul>
+                    <li class="menu__list">
+                        <a href="#" class="menu__link">Home</a>
+                    </li>
+                    <li class="menu__list">
+                        <a href="#features" class="menu__link">Books</a>
+                    </li>
+                    <li class="menu__list no-cursor">
+                        <a href="#" class="menu__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <header>
             <div class="header__container">
@@ -328,14 +347,16 @@
                     <h2 class="section__title">
                         Explore more <span class="purple">Books</span>
                     </h2>
+                    <a href="#latest">
                     <button class="btn">Browse Books</button>
+                </a>
                 </div>
             </div>
         </section>
     </main>
     <footer>
         <div class="container">
-            <div class="row">
+            <div class="row row__column">
                 <a href="#">
                     <figure class="footer__logo">
                         <img src="./assets/Library.svg" class="footer__logo--img" alt="">
@@ -347,7 +368,7 @@
                     <a href="" class="footer__link">Books</a>
                     <a href="" class="footer__link">Contact</a>
                 </div>
-
+                <div class="footer__copyright">Copyright &copy 2022</div>
             </div>
         </div>
     </footer>
