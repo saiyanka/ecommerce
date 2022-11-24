@@ -152,13 +152,66 @@ h2 {
     text-align: center;
     border: none;
     color: #7342d6;
+    display: none;
 }
 /*creating menu backdrop*/
 .menu__backdrop {
     position:absolute; /*we dont want it interfering with other settings we want it in its own world*/
-    
+    background-color: #242424; /*shows the space and size of backdrop*/
+    /*we need to make the black space cover the entire page*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    /*the above commands will ensure the whole page is covered*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*the above will position the menu in the center*/
+    transition: all 300ms ease;
+    opacity: 0;/*this will make the black space disappear*/
+    visibility: hidden;
+   
 }
 
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;/*this will make menu appear onclick*/
+}
+
+/*Experiment until satisfied*/
+.btn__menu--close {
+    position: absolute; /*will fix the button */
+    right: 20px;/*will push close button to the right*/
+    top: 10px;
+    padding: 8px;
+    color: white;
+
+}
+
+/*editing menu items*/
+.menu_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*the above centers and puts the menu in a column display*/
+
+.menu__link {
+    color: white; /*changes font color to white*/
+    font-size: 40px; /*increases font size*/
+
+}
+.menu__list {
+    padding: 32px; /*creates the vertical space between them*/
+}
+
+.menu--open {
+    max-height: 100vh;
+    overflow-y: hidden;
+}
 /*Highlights*/
 
 .container {
@@ -327,4 +380,45 @@ footer {
     padding: 0 8px;
 }
 
-/*Navigation*//*Navigation*//*Navigation*//*Navigation*/
+/*Media*/
+
+@media (max-width:550px){
+    .nav__links {
+        display: none;
+    }
+    .btn__menu {
+        display: block;
+    }
+    .highlight {
+        width: 100%;
+        margin-bottom: 24px;
+
+    }
+    .highlight:not(last-child) {
+        margin-bottom: 24px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .header__description {
+        padding: 0 24px;
+
+    }
+    h1 {
+        font-size: 40;
+    }
+    h2 {
+        font-size: 26px;
+    }
+    button {
+        font-size: 18px;
+    }
+    .book {
+        width: 50%;
+    }
+
+}
+
+/*Navigation*//*Navigation*//*Navigation*/
